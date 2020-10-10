@@ -1,9 +1,10 @@
 import lemminflect
+import nltk
 import random
 import spacy
 from spacy_wordnet.wordnet_annotator import WordnetAnnotator
 
-# def download_english_small_model():
+nltk.download('wordnet', quiet=True)
 
 try:
     nlp = spacy.load('en_core_web_sm')

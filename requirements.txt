@@ -1,4 +1,5 @@
 Flask==1.1.2
 lemminflect==0.2.1
-spacy==2.3.2
+nltk=3.3
+spacy==2.2.1
 spacy-wordnet==0.0.4
