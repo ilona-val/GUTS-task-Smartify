@@ -1,0 +1,27 @@
+.container {
+    padding-top: 7%;
+  }
+
+body {
+    background-color: #7fc2ca;
+}
+
+img {
+    height: 200px;
+}
+
+.h2 {
+    color: #393737;
+}
+
+.btn-lg {
+    background-color: #f18982;
+    color: #393737;
+    font-weight: 600;
+}
+
+.btn-clear {
+    background-color: #b4e2e7;
+    color: #393737;
+    font-weight: 500;
+}

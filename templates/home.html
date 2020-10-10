@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Smartify</title>
+
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/styles.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+<body>
+    <div class="container">
+        <div class="col-12 text-center">
+            <img src="static/images/brain.jpg" alt="brain">
+        </div>
+        <div class="text-right pb-1">
+            <button type="button" class="btn btn-clear material-icons" id="clear">delete_forever</button>
+        </div>
+        <div class="col-12 text-center">
+            <div class="col-12 form-group text-center">
+                <textarea class="form-control" id="textarea" rows="4" placeholder="Type text to smartify here..."></textarea>
+            </div>
+        </div>
+        <div class="text-center pb-3">
+            <button type="button" class="btn btn-lg" id="submitbtn">Smartify</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="col-11">
+                <p id="smartified"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let btn = document.getElementById("submitbtn")
+        btn.addEventListener("click", function(e) {
+            let text = document.getElementById("textarea").value
+            let response = fetch(window.location.href, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({'text': text})
+            }).then(response => response.json())
+            .then(data => document.getElementById("smartified").innerHTML = data.smartified)
+        })
+
+        let clear = document.getElementById("clear")
+        clear.addEventListener("click", function(e) {
+            document.getElementById("textarea").value = ""
+            document.getElementById("smartified").innerHTML = ""
+        })
+    </script>
+</body>
+</html>
