@@ -4,12 +4,6 @@ It can be run as both a command-line script, and as a Flask web application.
 
 ![Screenshot](./static/images/screenshot.png)
 
-### Notes
-
-This will work with Python 3.6 and 3.7.
-
-NOTE: On Windows, spaCy requires that Microsoft C++ Build Tools is installed: get it here if you see that error. https://visualstudio.microsoft.com/visual-cpp-build-tools/
-
 ### Setup
 
 There can be issues on Windows with installing SpaCy. It seems to work best with Anaconda. Good luck...
