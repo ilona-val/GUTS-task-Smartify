@@ -1,3 +1,5 @@
+# GUTS task: make me sound smarter!
+
 This tool will make your sentences sound smarter!
 
 It can be run as both a command-line script, and as a Flask web application.
